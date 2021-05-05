@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script src="modal.js"></script>
+<link rel="stylesheet" type="text/css" href="cssmodal.css">
+<script type="text/javascript" src="modal.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Modal Section -->
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+        <form class="decor" name="decor" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdAh0tnKrel9KsJYgC3wrD_U4NNNONtlu2qC76f5v4J9HZ01A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="form-left-decoration"></div>
+            <div class="form-right-decoration"></div>
+            <div class="form-inner">
+                <h3 align="center">Как с вами связаться?</h3>
+                <h5 align="left" style="color:#ff0000">* Обязательно к заполнению</h5>
+                <input type="text" placeholder="Введите ваше имя*" name="entry.1549586646" id="entry.1549586646">
+                <input type="text" placeholder="Введите ваш номер*" name="entry.1235943905" id="entry.1235943905">
+                <input type="text" placeholder="Введите почту" name="entry.505514542" id="entry.505514542">
+                <textarea placeholder="Комментарий или иные способы связи" rows="3" placeholder="Комментарий" name="entry.1703579608" id="entry.1703579608"></textarea>
+                <input type="submit" value="Отправить">
+                <div class="close-btn" onclick="togglePopup()">×</div>
+                <div id="notification-area">
+            </div>
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){notifySuccess()}else{notifyError()}"></iframe>
+    </div> 
+</div>
+<button onclick="togglePopup()">Show Popup</button>
+</div>
+</body>
+</html>
